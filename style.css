@@ -1,0 +1,961 @@
+/* @font-face {
+    font-family: archi;
+    src: url(./archia-light-webfont.woff);
+} */
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html,body{
+width: 100%;
+height: 100%;
+}
+
+.curser{
+    width: 20px;
+    height: 20px;
+    /* mix-blend-mode: difference; */
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+    position: fixed;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+}
+
+.page1{
+    width: 100%;
+    height: 100vh;
+}
+
+.video-p1{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    /* filter: blur(20px); */
+}
+
+.main-nav{
+    display: fixed;
+    width: 90%;
+    height: 10%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    margin-left: 5%;
+    mix-blend-mode: difference;
+}
+
+.right-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.ri-menu-line{
+    display: none;
+    color: white;
+    font-size: 4vh;
+}
+
+h4{
+    color: white;
+    font-family: archi;
+}
+
+.page2{
+    height: 100vh;
+    /* background-color: rgb(223, 240, 223); */
+    text-align: center;
+    padding: 0.1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page2-h2{
+   margin-top: 5%;
+   font-size: 2vw;
+   letter-spacing: 5px;
+   word-spacing: 5px;
+   font-weight: 200;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.page2-content{
+    width: 80%;
+    height: 60%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-left{
+    width: 45%;
+    height: 80%;
+    background-color: rgba(128, 128, 128, 0.1);
+    overflow-x: hidden;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+
+}
+
+.content-left:hover{
+    transition: ease-out 0.5s;
+    transform: scale(1.05);
+}
+.page2-img{
+    object-fit: contain;
+    transform: translateX(-85%);
+}
+
+.page2-overlay{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.785);
+    backdrop-filter: blur(20px);
+
+}
+
+.content-right{
+    width: 50%;
+    height: 80%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+}
+
+.content-right-h2{
+    width: 100%;
+    font-size: 8vh;
+    font-weight: 100;
+    text-align: start;
+
+}
+
+.content-right p {
+    font-size: 3vh;
+    text-align: start;
+}
+
+
+.content-right button{
+    width: 35%;
+    height: 15%;
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid grey;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.page3{
+    width: 100%;
+    height: 100vh;
+    /* background-color: lightseagreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page3-content{
+    width: 90%;
+    height: 70%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page3-content-left{
+    width: 50%;
+    height: 100%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.page3-h1{
+    font-size: 3vw;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    line-height: 3.8vw;
+}
+
+.page3-p{
+    font-size: 1.5vw;
+    font-weight: 100;
+    line-height: 2.2vw;
+
+}
+
+.page3-button{
+    width: 35%;
+    height: 10%;
+    letter-spacing: 1.5px;
+    border-radius: 30px;
+    font-size: 1vw;
+
+}
+
+.page3-video{
+    width: 100%;
+    height: 70%;
+    border-radius: 25px;
+    object-fit: cover;
+    margin-top: 5%;
+}
+
+.page3-video:hover{
+    transform: scale(2);
+}
+
+.page3-content-right{
+    width: 40%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.page456{
+    height: 360vh;
+    background-image: url(./bg-helmet.png);
+    background-size: cover;
+
+}
+
+.page4{
+    width: 100%;
+    height: 160vh;
+    /* background-image: url(./bg-helmet.png); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page4-heading{
+    width: 45%;
+}
+
+.page4-helmet{
+    width: 80%;
+    height: 95vh;
+    /* background-color: green;    */
+}
+
+.page4-content{
+    width: 80%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page4-h1{
+    width: 60%;
+    height: fit-content;
+    text-align: center;
+    font-size: 4vw;
+    /* background-color: yellow; */
+}
+
+.page4-p{
+    font-size: 1.5vw;
+    width: 55%;
+    height: fit-content;
+    text-align: center;
+}
+
+.page4-button{
+    width: 15%;
+    height: 18%;
+    font-size: 1.3vw;
+    border-radius: 30px;
+}
+
+.page5{
+    width: 100%;
+    height: 100vh;
+    /* background-color: green; */
+    /* background-image: url(./bg-helmet.png); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page5-1-content{
+    width: 90%;
+    height: 40%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page5-1-h1{
+    width: 45%;
+    font-weight: 100;
+    /* background-color: red; */
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.page5-1-video{
+    /* width: 80%; */
+    height: 100%;
+    border-radius: 20px;
+}
+
+.page5-2-content{
+    width: 90%;
+    height: 40%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.page5-2-content-right{
+    width: 45%;
+    height: 80%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.page5-2-video{
+    /* width: 80%; */
+    height: 100%;
+    border-radius: 20px;
+}
+
+.page5-2-h1{
+    font-weight: 100;
+    /* background-color: red; */
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.page5-button{
+    width: 40%;
+    height: 20%;
+    border-radius: 25px;
+    font-size: 1.1vw;
+}
+
+.page6{
+    width: 100%;
+    height: 100vh;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page6-1-content{
+    width: 90%;
+    height: 40%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page6-1-h1{
+    width: 45%;
+    font-weight: 100;
+    /* background-color: red; */
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.page6-1-video{
+    height: 100%;
+    border-radius: 20px;
+}
+
+.page6-2-content{
+    width: 90%;
+    height: 40%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.page6-2-video{
+    height: 100%;
+    border-radius: 20px;
+}
+
+.page6-2-content-right{
+    width: 45%;
+    height: 80%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page6-2-h1{
+    font-weight: 100;
+    /* background-color: red; */
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.page6-button{
+    width: 40%;
+    height: 20%;
+    border-radius: 25px;
+    font-size: 1.1vw;
+}
+
+.page7{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/ecosystem_bg.jpg);
+    background-size: cover;
+    /* position: relative; */
+}
+.page7-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8vw 5vw;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+}
+.page7-info{
+    flex-shrink: 0;
+    width: 30vw;
+    height: 100%;
+    /* background-color: red; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.page7-info h2{
+    font-size: 4vw;
+    font-weight: 100;
+}
+
+.page7-info p{
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+.page7-info h2{
+    font-family: archi;
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
+.page7-info button{
+    
+    font-size: 1vw;
+    margin-top: 2vw;
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.page7-elems{
+    flex-shrink: 0;
+    height: 110%;
+    width: 35vw;
+    background-color: rgba(255, 255, 255, 0.182);
+    -webkit-mask-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/ecosystem-box_bg_mob.svg);
+    -webkit-mask-size: cover;
+    -webkit-mask-position: bottom;
+    -webkit-mask-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    padding: 2vw;
+    margin: 0 3vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.page7-elems img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1vw;
+}
+
+.page7-elems h2{
+    font-family: archi;
+    font-size: 3vw;
+    font-weight: 100;
+}
+
+.page7-1h4{
+    font-size: 3vw;
+    font-weight: 400;
+    margin-top: 29%;
+    margin-left: 35%;
+    position: absolute;
+}
+.page7-2h4{
+    font-size: 3vw;
+    font-weight: 400;
+    margin-top: 29%;
+    margin-left: 76%;
+    position: absolute;
+}
+.page7-3h4{
+    font-size: 3vw;
+    font-weight: 400;
+    margin-top: 29%;
+    margin-left: 117%;
+    position: absolute;
+}
+
+.page7-elems p{
+    font-weight: 100;
+    opacity: 0.7;
+    font-size: 1.5vw;
+    margin-top: 5%;
+}
+
+.page7 .slider{
+    height: 5px;
+    width: 59%;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%,0);
+    overflow: hidden;
+}
+.page7 .slider-in{
+    height: 100%;
+    width: 17vw;
+    background-color: black;
+}
+
+.page89{
+    height: 220vh;
+    background-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/contact_bg.jpg);
+    background-size: cover;
+    
+}
+
+.page8{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.292);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(30px);
+}
+
+.page8-content1{
+    width: 90%;
+    height: 30%;
+    /* background-color: green; */
+    font-size: 2.2vw;
+    font-weight: 100;
+    display: flex;
+    align-items: end;
+}
+
+.page8-content2{
+    width: 90%;
+    height: 65%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+
+}
+
+.page8-content2-left  {
+    width: 53%;
+    height: 90%;
+    /* background-color: blue; */
+}
+
+/* .page8-content2-left h4{
+    font-size: 2vw;
+    font-weight: 100;
+} */
+
+
+.page8-content2-left h4{
+    font-size: 2.2vw;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.page8-content2-right{
+    width: 41%;
+    height: 90%;
+    /* background-color: red; */
+}
+
+.page8-content2-right p{
+    font-size: 1.8vw;
+    font-weight: 100;
+
+}
+
+.page8-content2-right h4{
+    font-size: 1.8vw;
+    font-weight: 200;
+    margin-top: 5%;
+    color: black;
+}
+
+.page9{
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(255, 255, 255, 0.292);
+    backdrop-filter: blur(30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.page9-heading{
+    width: 90%;
+    height: 10%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+
+.page9-content{
+    width: 90%;
+    height: 55%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.page9-content1,.page9-content2,.page9-content3{
+    width: 33%;
+    height: 100%;
+    /* background-color: black; */
+    /* background-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/ecosystem-box_bg_mob.svg);
+    background-size: contain;
+    background-repeat: no-repeat; */
+    background-color: rgba(255, 255, 255, 0.182);
+    -webkit-mask-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/ecosystem-box_bg_mob.svg);
+    -webkit-mask-size: cover;
+    -webkit-mask-position: bottom;
+    -webkit-mask-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    transform: rotate(180deg);
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.page9-content1-h4{
+    width: 50%;
+    height: 15%;
+    background-color: lightseagreen;
+    transform: rotate(180deg);
+    font-size: 3vw;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    font-weight: 100;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+}
+
+.page9-content2-h4{
+    width: 65%;
+    height: 25%;
+    background-color: rgb(218, 235, 140);
+    transform: rotate(180deg);
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    font-weight: 100;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    text-align: center;
+}
+
+.page9-content2-p{
+    /* background-color: red; */
+    width: 70%;
+    height: 30%;
+    transform: rotate(180deg);
+    font-size: 1.5vw;
+    font-weight: 100;
+    word-spacing: 1px;
+    word-spacing: 0.8px;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    opacity: 0.8;
+}
+
+.page9-content3-h4{
+    width: 57%;
+    height: 40%;
+    background-color: rgb(69, 230, 165);
+    transform: rotate(180deg);
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    font-weight: 100;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    text-align: center;
+}
+
+.page9-content3-p{
+    /* background-color: red; */
+    width: 70%;
+    height: 30%;
+    transform: rotate(180deg);
+    font-size: 1.5vw;
+    font-weight: 100;
+    word-spacing: 1px;
+    word-spacing: 0.8px;
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    opacity: 0.8;
+}
+
+.page9-content1-p{
+    /* background-color: red; */
+    width: 70%;
+    height: 30%;
+    transform: rotate(180deg);
+    font-size: 1.5vw;
+    font-weight: 100;
+    word-spacing: 1px;
+    word-spacing: 0.8px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    opacity: 0.8;
+}
+
+.page9-p{
+    /* background-color: orange; */
+    width: 60%;
+    height: 10%;
+    font-size: 1.8vw;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-family: sans-serif;
+    opacity: 0.8;
+
+}
+
+.page9-butt{
+    width: 90%;
+    height: 10%;
+    /* background-color: yellow; */
+}
+
+.page9-button{
+    width: 15%;
+    height: 60%;
+    border-radius: 30px;
+    font-size: 1.1vw;
+    background-color: white;
+    /* mix-blend-mode: difference; */
+    border: none;
+}
+
+.page9-footer{
+    transform: rotate(180deg);
+    width: 80%;
+    height: 10%;
+}
+
+.page10A{
+    height: 100vh;
+    width: 100%;
+    background: conic-gradient(at 0 0,rgb(255, 228, 233),aliceblue,rgb(205, 243, 255),rgb(195, 255, 195),lightyellow,rgb(251, 226, 230));
+    padding: 4vw;
+}
+
+.page10{
+    width: 100%;
+    height: 100vh;
+    /* background-color: orange; */
+    background-color: #c4c4c459;
+    border-radius: 30px;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page10-h4{
+    /* background-color: red; */
+    width: 90%;
+    height: 10%; 
+    color: black;
+    text-align: center; 
+}
+
+.page10-content1{
+    width: 90%;
+    height: 40%;
+    /* background-color: green;   */
+    display: flex; 
+    /* align-items: center; */
+}
+
+.page10-content1-left{
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+    
+}
+
+.page10-content1-left-h1{
+    width: 80%;
+    height: 50%;
+    /* background-color: green; */
+    font-size: 3vw;
+}
+
+.page10-content1-left-p{
+    width: 80%;
+    height: 40%;
+    /* background-color: red; */
+    font-size: 1.5vw;
+    font-weight: 100;
+}
+
+.page10-content1-right{
+    width: 40%;
+    height: 80%;
+    background-image: url(https://www.brain.space/wp-content/uploads/2023/07/DASHBOARD.jpg);
+    border-radius: 20px
+}
+
+.page10-content2{
+    width: 60%;
+    height: 25%;
+    /* background-color: lightseagreen; */
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.page10-content3{
+    width: 80%;
+    height: 25%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.page10-content3-img4,.page10-content3-img3,.page10-content3-img2,.page10-content3-img1,.page10-content2-img3,.page10-content2-img2,.page10-content2-img1{
+    width: 20%;
+    height: 90%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p10-img1-p1,.p10-img2-p2,.p10-img3-p3,.p10-img1-p,.p10-img2-p,.p10-img3-p,.p10-img4-p{
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+    text-align: center;
+}
+
+.page1 h1{
+    font-family: archi;
+
+    position: absolute;
+    bottom: 20%;
+    font-weight: 100;
+    z-index: 9;
+    left: 10%;
+    font-size: 4vw;
+    color: #fff;
+    /* background-color: blue; */
+    width: 50%;
+}
+.page1 h1::after{
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 50px;
+    animation: kuch 0.3s infinite linear;
+    background-color: #fff;
+}
+.page1 h1 span{
+    display: none;
+    font-family: archi;
+}
+@keyframes kuch {
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
